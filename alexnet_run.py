@@ -1,16 +1,21 @@
+import os
+
 import numpy as np
 import tensorflow as tf
 
 from alexnet_data import read_dataset, next_batch, compute_mean, subtract_mean
-from generate_data import DATA_FOLDER
+from generate_fake_data import DATA_FOLDER
 
 if __name__ == '__main__':
 
     NUM_TRAINING_IMAGES = 1000
     NUM_TESTING_IMAGES = 1000
-    names = ['DOWN', 'UP']  # maybe to be changed.
+
+    names = os.listdir(os.path.join(DATA_FOLDER, 'train'))
+    print(names)
     NUM_CLASSES = len(names)
     class_mapper = {names[0]: 0.0, names[1]: 1.0}
+    print(class_mapper)
     BATCH_SIZE = 128
     HEIGHT = 224
     WIDTH = 224

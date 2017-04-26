@@ -1,30 +1,4 @@
-import errno
-import os
-
-import matplotlib
-
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import numpy as np
-
-DATA_FOLDER = '/tmp/cnn-time-series/'
-
-
-def mkdir_p(path):
-    try:
-        os.makedirs(path)
-    except OSError as exc:
-        if exc.errno == errno.EEXIST and os.path.isdir(path):
-            pass
-        else:
-            raise
-
-
-def generate_time_series(arr, filename):
-    fig = plt.figure()
-    plt.plot(arr)
-    plt.savefig(filename)
-    plt.close(fig)
+from alexnet_data import *
 
 
 def generate():

@@ -1,10 +1,19 @@
-import os
-from glob import glob
+import matplotlib
+
+matplotlib.use('Agg')
+
 from random import shuffle
 
-import numpy as np
+import errno
+import os
+from glob import glob
 import skimage.io
 import skimage.transform
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+DATA_FOLDER = '/tmp/cnn-time-series/'
 
 
 def load_image(path):
@@ -90,3 +99,25 @@ def subtract_mean(inputs, mean_image):
     for image, label in inputs:
         new_inputs.append([image - mean_image, label])
     return new_inputs
+
+
+def mkdir_p(path):
+    try:
+        os.makedirs(path)
+    except OSError as exc:
+        if exc.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else:
+            raise
+
+
+def generate_time_series(arr, filename):
+    generate_multi_time_series([arr], filename)
+
+
+def generate_multi_time_series(arr_list, filename):
+    fig = plt.figure()
+    for arr in arr_list:
+        plt.plot(arr)
+    plt.savefig(filename)
+    plt.close(fig)
