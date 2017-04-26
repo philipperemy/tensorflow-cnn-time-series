@@ -20,7 +20,9 @@ Because too often time series are fed as 1-D vectors Recurrent Neural Networks (
 - Sometimes it's also hard to train very big conv nets (VGG19 is such an example).
 
 
-## Let's get started - Generate fake data
+## Let's get started!
+
+### Fake data generation
 ```
 git clone https://github.com/philipperemy/tensorflow-cnn-time-series.git
 cd tensorflow-cnn-time-series/
@@ -28,12 +30,12 @@ sudo pip3 install -r requirements.txt
 python3 generate_data.py
 ```
 
-## Start the training of the CNN (AlexNet is used here)
+### Start the training of the CNN (AlexNet is used here)
 ```
 python3 alexnet_run.py
 ```
 
-## Toy example: Binary classification of images of time series
+### Toy example: Binary classification of images of time series
 
 We consider the following binary classification problem of time series:
 - *UP*: If the time series went up in the next time frame.
@@ -49,6 +51,7 @@ Because it's impossible to classify pure random time series into two distinct cl
   <img src="fig/2.png" width="400"><br><br>
 </div>
 
+### Output example
 ```
 [TRAINING] #batch = 198, tr_loss = 0.074
 [TRAINING] #batch = 199, tr_loss = 0.229
