@@ -5,9 +5,10 @@ Because too often time series are fed as 1-D vectors Recurrent Neural Networks (
   <b>Will this time series go up or down in the next time frame?</b><br>
   <img src="fig/3.png" width="400">
 </p>
-<p>
+
+<p align="center">
   <b>Which plot contains highly correlated time series?</b><br>
-  <img src="fig/cor_uncor.png" width="400">
+  <img src="fig/cor_uncor.png" width="800">
 </p>
 
 ## Possible advantages/drawbacks of such approach:
