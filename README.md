@@ -6,6 +6,11 @@ Because too often time series are fed as 1-D vectors Recurrent Neural Networks (
   <img src="fig/3.png" width="400">
 </p>
 
+<p align="center">
+  <b>Which plot contains highly correlated time series?</b><br>
+  <img src="fig/cor_uncor.png" width="800">
+</p>
+
 ## Possible advantages/drawbacks of such approach:
 
 ### Advantages
