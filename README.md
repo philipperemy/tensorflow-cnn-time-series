@@ -56,11 +56,11 @@ Because it's impossible to classify pure random time series into two distinct cl
   <img src="fig/2.png" width="400"><br><br>
 </div>
 
-### Output example
+### Keep in mind that LSTM is also good!
 ```
-[TRAINING] #batch = 198, tr_loss = 0.074
-[TRAINING] #batch = 199, tr_loss = 0.229
-[TRAINING] #batch = 200, tr_loss = 0.075
-[TESTING] #batch = 200, te_loss = 0.094, te_acc = 0.992
-[ALL] total batches = 200 total mean accuracy on testing set = 0.99
+python3 lstm_keras.py # on correlation classification task
+[...]
+[test] loss= 0.021, acc= 100.00
+[test] loss= 0.004, acc= 100.00
+[test] loss= 0.004, acc= 100.00
 ```
